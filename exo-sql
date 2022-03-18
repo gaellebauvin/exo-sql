@@ -1,0 +1,52 @@
+1)select * from facilities;
+
+2)select membercost 
+from facilities;
+
+3)SELECT membercost 
+FROM facilities WHERE membercost >= 1;
+
+4)SELECT facid, name, membercost, monthlymaintenance 
+FROM facilities WHERE membercost > 0 
+AND membercost < monthlymaintenance/ 50;
+
+5)SELECT NAME 
+from facilities 
+WHERE NAME LIKE '%Tennis%';
+
+6)SELECT name 
+FROM facilities 
+WHERE facid 
+IN (1-5);
+
+7)SELECT name,
+CASE WHEN monthlymaintenance < 100 
+THEN 'cheap' 
+ELSE 'expensive' 
+END AS "cost" 
+FROM facilities;
+
+8) SELECT id, first_name, last_name, join_date
+FROM member
+WHERE join_date >= '2012-09-01';
+
+9)SELECT DISTINCT(first_name) 
+FROM member 
+ORDER BY first_name 
+LIMIT 10;
+
+10) SELECT name 
+FROM facility 
+UNION ALL SELECT 
+first_name 
+FROM member;
+
+11) SELECT join_date 
+FROM member 
+ORDER BY id DESC
+LIMIT 1;
+
+12) SELECT first_name, last_name  
+FROM member
+ORDER BY id DESC
+LIMIT 1;
