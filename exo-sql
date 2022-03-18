@@ -26,27 +26,27 @@ ELSE 'expensive'
 END AS "cost" 
 FROM facilities;
 
-8) SELECT id, first_name, last_name, join_date
-FROM member
-WHERE join_date >= '2012-09-01';
+8) SELECT id, firstname, lastname, joindate
+FROM members
+WHERE joindate >= '2012-09-01';
 
-9)SELECT DISTINCT(first_name) 
-FROM member 
-ORDER BY first_name 
+9)SELECT DISTINCT(firstname) 
+FROM members
+ORDER BY firstname 
 LIMIT 10;
 
 10) SELECT name 
-FROM facility 
+FROM facilities
 UNION ALL SELECT 
-first_name 
-FROM member;
+firstname 
+FROM members;
 
-11) SELECT join_date 
-FROM member 
+11) SELECT joindate 
+FROM members
 ORDER BY id DESC
 LIMIT 1;
 
-12) SELECT first_name, last_name  
-FROM member
+12) SELECT firstname, lastname  
+FROM members
 ORDER BY id DESC
 LIMIT 1;
